@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Array Elements</title>
+</head>
+<body>
+  <h2>Join Array Elements into Strings</h2>
+  
+  <script>
+    // JavaScript code embedded within HTML
+    // Define the array
+    var myColor = ["Red", "Green", "White", "Black"];
+
+    // Join array elements into strings
+    var joinedWithComma = myColor.toString(); // Using toString()
+    var joinedWithCommaAndJoin = myColor.join(); // Using join() without argument
+    var joinedWithPlus = myColor.join('+'); // Using join('+')
+
+    // Display the results
+    document.write("<p>Joined with comma: " + joinedWithComma + "</p>");
+    document.write("<p>Joined with comma and join(): " + joinedWithCommaAndJoin + "</p>");
+    document.write("<p>Joined with plus: " + joinedWithPlus + "</p>");
+  </script>
+</body>
+</html>

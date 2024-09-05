@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compute Sum and Product of an Array</title>
+</head>
+<body>
+  <h2>Compute Sum and Product of an Array</h2>
+  
+  <script>
+    // JavaScript code embedded within HTML
+    // Prompt user to enter numbers and convert them into array
+    var input = prompt("Enter numbers separated by commas (e.g., 5, 10, 3, 8, 2):");
+
+    // Split the input string into an array of numbers
+    var numbers = input.split(",").map(function(item) {
+      return parseInt(item.trim(), 10);
+    });
+
+    // Function to compute sum of array elements
+    function computeSum(arr) {
+      var sum = 0;
+      for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      return sum;
+    }
+
+    // Function to compute product of array elements
+    function computeProduct(arr) {
+      var product = 1;
+      for (var i = 0; i < arr.length; i++) {
+        product *= arr[i];
+      }
+      return product;
+    }
+
+    // Calculate sum and product
+    var sum = computeSum(numbers);
+    var product = computeProduct(numbers);
+
+    // Display results
+    document.write("<p>Array: [" + numbers.join(", ") + "]</p>");
+    document.write("<p>Sum: " + sum + "</p>");
+    document.write("<p>Product: " + product + "</p>");
+  </script>
+</body>
+</html>

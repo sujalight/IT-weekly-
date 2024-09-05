@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Evaluation</title>
+    <script>
+        function evaluateMark() {
+            var mark = document.getElementById('mark').value;
+            var result = '';
+
+            if (mark >= 80 && mark <= 100) {
+                result = 'Distinction';
+            } else if (mark >= 75 && mark < 80) {
+                result = 'First Division';
+            } else if (mark >= 60 && mark < 75) {
+                result = 'Second Division';
+            } else if (mark >= 50 && mark < 60) {
+                result = 'Third Division';
+            } else if (mark < 50) {
+                result = 'Fail';
+            } else {
+                result = 'Invalid mark';
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Marks Evaluation</h1>
+    <label for="mark">Enter your mark: </label>
+    <input type="number" id="mark" name="mark" min="0" max="100">
+    <button onclick="evaluateMark()">Evaluate</button>
+    <p id="result"></p>
+</body>
+</html>

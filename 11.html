@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Items to Array and Display</title>
+</head>
+<body>
+  <h2>Add Items to Array and Display</h2>
+
+  <label for="itemInput">Add Item:</label>
+  <input type="text" id="itemInput">
+  <button onclick="addItem()">Add</button>
+
+  <ul id="itemsList"></ul>
+
+  <script>
+    // JavaScript code embedded within HTML
+    // Define an initially empty array
+    var items = [];
+
+    // Function to add item to the array and display items
+    function addItem() {
+      var newItem = document.getElementById("itemInput").value.trim();
+
+      // Check if input is not empty
+      if (newItem !== "") {
+        // Add item to the array
+        items.push(newItem);
+
+        // Clear input field
+        document.getElementById("itemInput").value = "";
+
+        // Display items
+        displayItems();
+      }
+    }
+
+    // Function to display items in the list
+    function displayItems() {
+      var itemsList = document.getElementById("itemsList");
+      itemsList.innerHTML = ""; // Clear previous list items
+
+      // Loop through items array and create list items
+      for (var i = 0; i < items.length; i++) {
+        var li = document.createElement("li");
+        li.textContent = items[i];
+        itemsList.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
